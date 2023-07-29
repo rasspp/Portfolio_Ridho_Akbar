@@ -4,6 +4,7 @@
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { StrictMode } from "react";
+import createRoot from "react-dom/client";
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
 //    <React.StrictMode>
