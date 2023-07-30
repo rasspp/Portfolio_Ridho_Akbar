@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Row, Col, Card } from "react-bootstrap";
-import heroAbout from "./../../Assets/hero_image/hero_about.svg";
+import heroAbout from "./../../assets/hero_image/hero_about.svg";
 
 function AboutHeader() {
    return (
