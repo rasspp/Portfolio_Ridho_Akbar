@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import PortfolioCard from "./PortfolioCards";
-import damatiza from "../../Assets/Portfolio/damatiza.png";
+import damatiza from "./../../Assets/Portfolio/damatiza.png";
 
 function Portfolios() {
    return (
