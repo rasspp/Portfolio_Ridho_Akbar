@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Experience from "./components/Experience/Experience";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 // import ScrollToTop from "./components/ScrollToTop";
-import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
