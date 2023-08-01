@@ -14,7 +14,7 @@ function Footer() {
                   <h3>Dev by Ridho Akbar</h3>
                </Col>
                <Col md="6" className="copyright">
-                  <h3>Copyright © {year} </h3>
+                  <h3>Copyright ©{year} </h3>
                </Col>
             </Col>
             <Col xs={4} className="footer-icons">
