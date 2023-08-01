@@ -5,8 +5,8 @@ import Container from "react-bootstrap/Container";
 // import logo from "";
 import { Link } from "react-router-dom";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
-import { BsBriefcase } from "react-icons/bs";
-import { CgFileDocument } from "react-icons/cg";
+import { BsBriefcase, BsBook } from "react-icons/bs";
+// import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
    const [expand, updateExpanded] = useState(false);
@@ -22,10 +22,12 @@ function NavBar() {
 
    window.addEventListener("scroll", scrollHandler);
 
+   const navLink = "d-flex justify-content-center align-items-center gap-1";
+
    return (
       <Navbar expanded={expand} fixed="top" expand="md" className={navColour ? "sticky" : "navbar"}>
          <Container>
-            <Navbar.Brand href="/" className="d-flex">
+            <Navbar.Brand href="/home" className="d-flex">
                {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
                <p className="navbar-brand">Rass</p>
             </Navbar.Brand>
@@ -42,26 +44,26 @@ function NavBar() {
             <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="ms-auto" defaultActiveKey="#home">
                   <Nav.Item>
-                     <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                        <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                     <Nav.Link className={navLink} as={Link} to="/" onClick={() => updateExpanded(false)}>
+                        <AiOutlineHome className="mb-1" /> Home
                      </Nav.Link>
                   </Nav.Item>
 
                   <Nav.Item>
-                     <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
-                        <AiOutlineUser style={{ marginBottom: "2px" }} /> About Me
+                     <Nav.Link className={navLink} as={Link} to="/about" onClick={() => updateExpanded(false)}>
+                        <AiOutlineUser className="mb-1" /> About Me
                      </Nav.Link>
                   </Nav.Item>
 
                   <Nav.Item>
-                     <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
-                        <BsBriefcase style={{ marginBottom: "2px", marginRight: "2px" }} /> Portfolios
+                     <Nav.Link className={navLink} as={Link} to="/portfolios" onClick={() => updateExpanded(false)}>
+                        <BsBriefcase className="mb-1" /> Portfolios
                      </Nav.Link>
                   </Nav.Item>
 
                   <Nav.Item>
-                     <Nav.Link as={Link} to="/experience" onClick={() => updateExpanded(false)}>
-                        <CgFileDocument style={{ marginBottom: "2px" }} /> Experience
+                     <Nav.Link className={navLink} as={Link} to="/experience" onClick={() => updateExpanded(false)}>
+                        <BsBook /> Experience
                      </Nav.Link>
                   </Nav.Item>
                </Nav>
