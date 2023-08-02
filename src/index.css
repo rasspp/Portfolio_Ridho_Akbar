@@ -302,12 +302,14 @@ button:focus {
    font-size: 2.5rem !important;
    margin-top: 1.5rem;
 }
-.heading-name strong:hover {
-   color: #181227 !important;
-   background-color: var(--main-color);
-   letter-spacing: 1.5px;
-   padding: 0 20px;
-   margin: 0 10px;
+@media (min-width: 767px) {
+   .heading-name strong:hover {
+      color: #181227 !important;
+      background-color: var(--main-color);
+      letter-spacing: 1.5px;
+      padding: 0 20px;
+      margin: 0 10px;
+   }
 }
 .profession {
    margin-top: -0.5rem;
@@ -457,6 +459,10 @@ strong {
    .project-heading h1 {
       font-size: 2rem;
    }
+   .project-heading h1 {
+      display: flex;
+      flex-direction: column;
+   }
 }
 .project-heading hr {
    margin: 0;
@@ -515,8 +521,6 @@ strong {
    padding: 0;
    margin-top: -10px;
    margin-bottom: 0;
-
-   /* border: 1px solid blue; */
 }
 .project-card-view hr {
    width: 100%;
@@ -534,6 +538,15 @@ strong {
    overflow: hidden;
    width: 305px;
    min-height: 200px;
+}
+@media (max-width: 767px) {
+   .project-card-view {
+      max-width: 300px;
+      min-height: 325px !important;
+   }
+   .project-card-content div {
+      width: 85%;
+   }
 }
 .project-card-content .image {
    border-radius: 10px 20px;
@@ -718,6 +731,7 @@ strong {
 
 .tech-icons {
    position: relative;
+   min-width: 130px;
    min-height: 140px;
    overflow: hidden;
    font-size: 4.5em;
@@ -739,6 +753,22 @@ strong {
    flex-wrap: wrap;
 }
 @media (max-width: 767px) {
+   .tech-icons.tool {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.4rem;
+   }
+   .tech-icons.tool:nth-child(1) p {
+      right: 5%;
+   }
+   .tech-icons.tool svg {
+      transition: 0.3s;
+   }
+   .tech-icons.tool:hover svg {
+      transform: translateY(-10px);
+      font-size: 3.2rem;
+   }
    .about-section .project-heading {
       margin-bottom: 30px;
       font-size: 2rem;
@@ -811,6 +841,17 @@ strong {
    .github-heading h1 {
       font-size: 2rem;
       margin-bottom: 70px !important;
+   }
+   .react-activity-calendar__footer {
+      display: flex;
+      flex-direction: column;
+   }
+   .react-activity-calendar__count {
+      order: 2;
+      margin-top: 20px;
+   }
+   .react-activity-calendar__legend-colors {
+      order: 1;
    }
 }
 
@@ -915,6 +956,13 @@ strong {
    flex-wrap: wrap;
    margin-bottom: 50px !important;
 }
+@media (max-width: 767px) {
+   .content-experience .project-heading {
+      padding: 10px 10px 0 15px;
+      margin-top: 20px;
+      margin-bottom: 10px !important;
+   }
+}
 .content-experience h1 {
    width: 98%;
    text-align: left;
@@ -931,20 +979,15 @@ strong {
    flex-wrap: wrap;
    gap: 20px;
 }
-@media (max-width: 767px) {
-   .experience-cards {
-      gap: 50px;
-   }
-}
 .experience-cards .container-card {
-   width: 100%;
+   width: 45%;
    padding: 10px 20px 0 20px;
    margin: 0;
    border-radius: 15px 40px;
 }
-@media (min-width: 767px) {
+@media (max-width: 990px) {
    .experience-cards .container-card {
-      width: 45%;
+      width: 100%;
    }
 }
 .experience-cards .container-card .card {
@@ -960,6 +1003,15 @@ strong {
    transform: translate(7px, 7px);
    box-shadow: -1px 0px 0px 5px rgb(38, 143, 38);
 }
+@media (max-width: 767px) {
+   .experience-cards {
+      gap: 50px;
+   }
+
+   .experience-cards .container-card .card {
+      padding: 6px !important;
+   }
+}
 
 .experience-cards .container-card h2 {
    font-size: 2.5rem;
@@ -972,6 +1024,7 @@ strong {
       font-size: 2rem;
    }
 }
+
 .experience-cards .container-card .date {
    text-align: left;
    font-weight: bold;
@@ -1000,6 +1053,14 @@ strong {
    text-decoration: underline;
 }
 
+/* *** ================= Responsive Experience *** ================= */
 @media (max-width: 767px) {
-   /* *** ================= Responsive Experience *** ================= */
+   .experience-cards ul {
+      list-style: none;
+      padding-left: 0.5rem;
+   }
+   .experience-cards ul > li:not(.not-line) {
+      border-bottom: 1px solid yellow !important;
+      margin-bottom: 1rem;
+   }
 }

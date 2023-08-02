@@ -53,7 +53,7 @@ export const ExpCard = ({ type }) => {
                <li>
                   Free Code Camp
                   <ul>
-                     <li>Responsive Web Design</li>
+                     <li className="not-line">Responsive Web Design</li>
                   </ul>
                </li>
             ),

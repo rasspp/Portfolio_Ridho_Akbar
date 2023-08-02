@@ -26,7 +26,7 @@ function PortfolioCards({ title, imgPath, description, ghUrl, demo, demoUrl }) {
             <hr />
             <div className="project-card-content">
                <div>
-                  <Card.Img className="image" variant="top" src={imgPath} alt="card-img" />
+                  <Card.Img className="image" variant="top" src={imgPath} alt="card-img" loading="lazy" />
                   <Card.Text className={`desc ${isAnimationActive ? "out" : isButtonClicked ? "in" : ""} `}>{description}</Card.Text>
                </div>
             </div>

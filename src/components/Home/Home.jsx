@@ -8,7 +8,7 @@ function Home() {
          <Container fluid className="home-section" id="home">
             <Container className="home-content">
                <Row>
-                  <Col md={8} className="home-heading ps-5">
+                  <Col md={8} className="home-heading ps-4 ps-md-5">
                      <div className="home-typewriter">
                         <h1 className="heading">
                            Welcome to <strong>My Personal Website</strong>
@@ -29,7 +29,7 @@ function Home() {
 
                   <Col md={4} className="hero-home">
                      <Tilt>
-                        <img src={myImg} className="img-fluid" alt="Foto Ilustrasi" />
+                        <img src={myImg} className="img-fluid" alt="My Picture" loading="lazy" />
                      </Tilt>
                   </Col>
                </Row>

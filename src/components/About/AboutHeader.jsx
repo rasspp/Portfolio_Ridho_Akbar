@@ -27,7 +27,7 @@ function AboutHeader() {
             </Card>
          </Col>
          <Col md={5} className="about-img">
-            <img src={heroAbout} alt="about" className="img-fluid" />
+            <img src={heroAbout} alt="about" className="img-fluid" loading="lazy" />
          </Col>
       </Row>
    );
