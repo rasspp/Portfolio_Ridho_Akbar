@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
+import { BsFillFileEarmarkTextFill } from "react-icons/bs";
 
 /* eslint-disable react/prop-types */
 export const ExpCard = ({ type }) => {
@@ -36,9 +37,30 @@ export const ExpCard = ({ type }) => {
       title: "Formal Education",
       exp: [
          {
-            first: <li>SDN 242 Palembang ( 2009 - 2015 )</li>,
-            second: <li>SMPN 52 Palembang ( 2015 - 2018 )</li>,
-            third: <li>SMK Utama Bakti Palembang ( 2018 - 2021 )</li>,
+            first: (
+               <li className="formal-edu">
+                  <div>
+                     <p> SDN 242 Palembang </p>
+                     <p>( 2009 - 2015 )</p>
+                  </div>
+               </li>
+            ),
+            second: (
+               <li className="formal-edu">
+                  <div>
+                     <p>SMPN 52 Palembang</p>
+                     <p>( 2015 - 2018 )</p>
+                  </div>
+               </li>
+            ),
+            third: (
+               <li className="formal-edu">
+                  <div>
+                     <p>SMK Utama Bakti Palembang</p>
+                     <p>( 2018 - 2021 )</p>
+                  </div>
+               </li>
+            ),
          },
       ],
       goto: "https://damatiza.com",
@@ -51,9 +73,16 @@ export const ExpCard = ({ type }) => {
          {
             first: (
                <li>
-                  Free Code Camp
+                  Free Code Camp :
                   <ul>
-                     <li className="not-line">Responsive Web Design</li>
+                     <li className="not-line d-flex justify-content-between">
+                        <div>
+                           <span className="d-md-none">-</span> Responsive Web Design
+                        </div>
+                        <a href="#">
+                           <BsFillFileEarmarkTextFill />
+                        </a>
+                     </li>
                   </ul>
                </li>
             ),
@@ -100,7 +129,7 @@ export const ExpCard = ({ type }) => {
                  ))
                : types.exp.map((item, index) => (
                     <div key={item}>
-                       <h2>{types.title}</h2>
+                       <h2 className="education">{types.title}</h2>
                        <p className="date"></p>
                        <div className="card-content">
                           <ul type="1">

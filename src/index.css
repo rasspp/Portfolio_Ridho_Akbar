@@ -544,8 +544,10 @@ strong {
       max-width: 300px;
       min-height: 325px !important;
    }
-   .project-card-content div {
-      width: 85%;
+   .project-card-content {
+      width: 100%;
+      min-height: 150px;
+      padding-left: 5px;
    }
 }
 .project-card-content .image {
@@ -956,16 +958,20 @@ strong {
    flex-wrap: wrap;
    margin-bottom: 50px !important;
 }
+.content-experience h1 {
+   width: 98%;
+   text-align: left;
+}
 @media (max-width: 767px) {
    .content-experience .project-heading {
       padding: 10px 10px 0 15px;
       margin-top: 20px;
       margin-bottom: 10px !important;
    }
-}
-.content-experience h1 {
-   width: 98%;
-   text-align: left;
+   .content-experience .project-heading h1 {
+      width: 98%;
+      text-align: center !important;
+   }
 }
 
 .content-experience hr {
@@ -1041,6 +1047,7 @@ strong {
    border-radius: 0px 0px 20px 20px !important;
    transition: 0.3s;
 }
+
 .experience-cards ul li {
    font-size: 1rem;
    text-align: left;
@@ -1052,6 +1059,13 @@ strong {
 .experience-cards ul li a:hover {
    text-decoration: underline;
 }
+.experience-cards ul .formal-edu div {
+   display: flex;
+   gap: 5px;
+}
+.experience-cards .education:nth-child(2) li {
+   margin-bottom: 15px !important;
+}
 
 /* *** ================= Responsive Experience *** ================= */
 @media (max-width: 767px) {
@@ -1060,14 +1074,21 @@ strong {
       padding-left: 0.5rem;
    }
    .experience-cards ul > li:not(.not-line) {
-      border-bottom: 1px solid yellow !important;
+      padding-bottom: 2px;
       margin-bottom: 1rem;
+      border-bottom: 2px solid var(--main-color) !important;
+   }
+   .experience-cards ul .formal-edu div {
+      flex-direction: column;
+   }
+   .experience-cards ul .formal-edu div p {
+      padding: 0;
+      margin: 0;
+   }
+   .experience-cards ul .formal-edu div p:nth-child(2) {
+      text-align: right;
+   }
+   .experience-cards .education {
+      padding: 0 50px;
    }
 }
-
-/* todo ===================================================*/
-/* * 1.bug info in card portolio
-2. title Best freelance work, make work to text align center
-3. line in card experience
-
-*/
