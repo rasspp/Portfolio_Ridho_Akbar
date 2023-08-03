@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { BsArrow90DegLeft, BsAwardFill } from "react-icons/bs";
+import { CgWebsite } from "react-icons/cg";
 
 /* eslint-disable react/prop-types */
 export const ExpCard = ({ type }) => {
@@ -82,6 +83,7 @@ export const ExpCard = ({ type }) => {
                         </div>
                         <a href="#">
                            <BsAwardFill />
+                           <CgWebsite />
                         </a>
                      </li>
                   </ul>
