@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import { BsFillFileEarmarkTextFill } from "react-icons/bs";
+import { BsArrow90DegLeft, BsAwardFill } from "react-icons/bs";
 
 /* eslint-disable react/prop-types */
 export const ExpCard = ({ type }) => {
@@ -72,15 +72,16 @@ export const ExpCard = ({ type }) => {
       exp: [
          {
             first: (
-               <li>
+               <li className="informal-edu">
                   Free Code Camp :
                   <ul>
-                     <li className="not-line d-flex justify-content-between">
+                     <li className="not-line ">
                         <div>
-                           <span className="d-md-none">-</span> Responsive Web Design
+                           <BsArrow90DegLeft />
+                           Responsive Web Design
                         </div>
                         <a href="#">
-                           <BsFillFileEarmarkTextFill />
+                           <BsAwardFill />
                         </a>
                      </li>
                   </ul>

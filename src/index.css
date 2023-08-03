@@ -1063,8 +1063,20 @@ strong {
    display: flex;
    gap: 5px;
 }
-.experience-cards .education:nth-child(2) li {
-   margin-bottom: 15px !important;
+.experience-cards .informal-edu ul {
+   padding: 0;
+}
+.experience-cards .informal-edu {
+   margin-bottom: 15px;
+}
+.experience-cards .informal-edu li div svg {
+   transform: rotate(180deg);
+   margin-top: -10px;
+   margin-right: 5px;
+}
+.experience-cards .informal-edu li {
+   display: flex;
+   gap: 5px;
 }
 
 /* *** ================= Responsive Experience *** ================= */
