@@ -1074,7 +1074,12 @@ strong {
    margin-top: -10px;
    margin-right: 5px;
 }
-.experience-cards .informal-edu li a svg:nth-child(2) {
+.experience-cards .informal-edu li button {
+   background-color: transparent;
+   border: none;
+   color: var(--main-color);
+}
+.experience-cards .informal-edu li a svg {
    width: 30px;
    font-size: 1.2rem;
    padding-left: 5px;

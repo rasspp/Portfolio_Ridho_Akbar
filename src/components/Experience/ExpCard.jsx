@@ -81,10 +81,11 @@ export const ExpCard = ({ type }) => {
                            <BsArrow90DegLeft />
                            Responsive Web Design
                         </div>
-                        <a href="#">
+                        <button>
                            <BsAwardFill />
-                           <CgWebsite />
-                        </a>
+                        </button>
+                        <a href="https://rasspp.github.io/freecodecamp-responsivewebdesign.github.io/"></a>
+                        <CgWebsite />
                      </li>
                   </ul>
                </li>
