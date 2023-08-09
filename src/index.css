@@ -1081,15 +1081,52 @@ strong {
 }
 .experience-cards .informal-edu li .demo svg {
    width: 30px;
+   height: 25px;
    font-size: 1.2rem;
-   padding-left: 5px;
-   /* margin-left: 5px; */
-   border-left: 2px solid var(--main-color);
+   padding: 2.5px;
+   border-radius: 4px;
+   transition: 0.3s;
+   /* border-left: 2px solid var(--main-color); */
+}
+.experience-cards .informal-edu li .demo::before {
+   content: "|";
+   margin-right: 4.5px;
+}
+.experience-cards .informal-edu li .demo svg:hover {
+   /* color: #96b23caf; */
+   color: var(--background-color);
+   background-color: var(--main-color);
 }
 
 .experience-cards .informal-edu li {
    display: flex;
    gap: 5px;
+}
+
+/* Exp Sertificate */
+.certificate-button {
+   width: 25px;
+   height: 25px;
+   color: var(--main-color) !important;
+   background-color: transparent !important;
+   padding: 0;
+   border: none;
+   border-radius: 4px;
+   transition: 0.3s;
+}
+.certificate-button:hover {
+   /* color: #96b23caf; */
+   color: var(--background-color) !important;
+   background-color: var(--main-color) !important;
+}
+.certificate-modal .modal-header {
+   background-color: var(--main-color) !important;
+}
+.certificate-modal .modal-body {
+   background-color: var(--main-color);
+}
+.certificate-modal .modal-footer {
+   background-color: var(--main-color) !important;
 }
 
 /* *** ================= Responsive Experience *** ================= */

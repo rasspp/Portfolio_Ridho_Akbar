@@ -1,6 +1,38 @@
 /* eslint-disable no-unused-vars */
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import { BsArrow90DegLeft, BsAwardFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
+import imageRWD from "./../../assets/experience/ResponsiveWD.png";
+
+function ModalCertificate() {
+   const [show, setShow] = useState(false);
+
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
+   return (
+      <>
+         <Button className="certificate-button" variant="primary" onClick={handleShow}>
+            <BsAwardFill />
+         </Button>
+
+         <Modal className="certificate-modal" show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+               <Modal.Title>Responsive Web Design</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+               <img src={imageRWD} alt="Image Responsive Web Design Certificate" width={"100%"} />
+            </Modal.Body>
+            <Modal.Footer>
+               <Button variant="secondary" onClick={handleClose}>
+                  Close
+               </Button>
+            </Modal.Footer>
+         </Modal>
+      </>
+   );
+}
 
 export const ExpCardDatas = {
    artatixData: {
@@ -69,14 +101,19 @@ export const ExpCardDatas = {
                      <BsArrow90DegLeft />
                      Responsive Web Design
                   </div>
-                  <button className="certificate">
+
+                  {/* <button className="certificate">
                      <BsAwardFill />
-                  </button>
+                     <div className="certificate-view">
+                        <img src={imageRWD} alt="Image Responsive Web Design Certificate" className="certificate-view" />
+                     </div>
+                  </button> */}
+
+                  <ModalCertificate />
+
                   <a href="https://rasspp.github.io/freecodecamp-responsivewebdesign.github.io/" className="demo" target="_blank" rel="noreferrer">
                      <CgWebsite />
                   </a>
-                  {/* <img  src={imageRWD} alt="Image Responsive Web Design Certificate" /> */}
-                  <img src="#" alt="Image Responsive Web Design Certificate" className="certificateView" />
                </li>
             </ul>
          </li>,
@@ -85,4 +122,3 @@ export const ExpCardDatas = {
       goto: "https://damatiza.com",
    },
 };
-// export default { artatixData, damatizaData, formalEducationData, informalEducationData };
