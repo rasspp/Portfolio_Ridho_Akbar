@@ -15,13 +15,13 @@ export const ExpSection = ({ section, h2Start, h2End }) => {
 
             {section == "work" ? (
                <div className="experience-cards">
-                  <ExpCard type="artatixData" />
-                  <ExpCard type="damatizaData" />
+                  <ExpCard dataType="artatixData" />
+                  <ExpCard dataType="damatizaData" />
                </div>
             ) : (
                <div className="experience-cards">
-                  <ExpCard type="formalEducationData" />
-                  <ExpCard type="informalEducationData" />
+                  <ExpCard dataType="formalEducationData" />
+                  <ExpCard dataType="informalEducationData" />
                </div>
             )}
          </Col>

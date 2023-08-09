@@ -8,21 +8,21 @@ import { ExpCardDatas } from "./../../datas/experience/ExpCardDatas";
 
 /* eslint-disable react/prop-types */
 
-export function ExpCard({ type }) {
+export function ExpCard({ dataType }) {
    // const [selectedData, setSelectedData] = useState(
-   //    type === "artatix"
+   //    dataType === "artatix"
    //       ? ExpCardDatas.artatixData
-   //       : type === "damatiza"
+   //       : dataType === "damatiza"
    //       ? ExpCardDatas.damatizaData
-   //       : type === "formal education"
+   //       : dataType === "formal education"
    //       ? ExpCardDatas.formalEducationData
-   //       : type === "informal education"
+   //       : dataType === "informal education"
    //       ? ExpCardDatas.informalEducationData
    //       : {}
    // );
 
-   // console.log(ExpCardDatas[type]);
-   const selectedData = ExpCardDatas.artatixData || {};
+   console.log(ExpCardDatas[dataType]);
+   const selectedData = ExpCardDatas[dataType];
 
    return (
       <Col xs={12} md={12} xl={5} className="container-card">
@@ -66,7 +66,7 @@ export function ExpCard({ type }) {
    // return (
    //    <Col xs={12} md={12} xl={5} className="container-card">
    //       <div className="card">
-   //          {type === "artatix" || type === "damatiza"
+   //          {dataType === "artatix" || dataType === "damatiza"
    //             ? selectedData.achievements.map((item, index) => (
    //                  <div key={item}>
    //                     <h2>{selectedData.title}</h2>
@@ -91,7 +91,7 @@ export function ExpCard({ type }) {
    //                     <h2 className="education">{selectedData.title}</h2>
    //                     <p className="date"></p>
    //                     <div className="card-content">
-   //                        <ul type="1">
+   //                        <ul dataType="1">
    //                           {item.first}
    //                           {item.second}
    //                           {item.third}
