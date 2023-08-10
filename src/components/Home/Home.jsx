@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+// import myImg from "./../../assets/hero_image/ridhoakbar.png";
 import myImg from "./../../assets/hero_image/ridhoakbar.png";
 import Tilt from "react-parallax-tilt";
 
