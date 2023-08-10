@@ -1119,14 +1119,39 @@ strong {
    color: var(--background-color) !important;
    background-color: var(--main-color) !important;
 }
+.certificate-modal .modal-content {
+   background-color: transparent;
+}
 .certificate-modal .modal-header {
+   background-color: var(--background-color);
+   color: var(--main-color) !important;
+   border-radius: 6px 12px 0 0;
+   border: var(--border);
+}
+.certificate-modal .modal-header button {
    background-color: var(--main-color) !important;
+   border-radius: 5px 10px;
 }
 .certificate-modal .modal-body {
-   background-color: var(--main-color);
+   border: var(--border);
+   background-color: var(--background-color);
 }
 .certificate-modal .modal-footer {
+   border: var(--border);
+   background-color: var(--background-color);
+}
+.certificate-modal .modal-footer button {
+   font-weight: bold;
+   color: var(--main-color);
+   background-color: var(--background-color) !important;
+   border-radius: 6px 12px;
+   border: 2px solid var(--main-color);
+   transition: 0.3s;
+}
+.certificate-modal .modal-footer button:hover {
+   color: var(--background-color);
    background-color: var(--main-color) !important;
+   border-color: var(--background-color);
 }
 
 /* *** ================= Responsive Experience *** ================= */

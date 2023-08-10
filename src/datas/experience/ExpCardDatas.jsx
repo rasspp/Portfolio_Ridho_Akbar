@@ -93,7 +93,7 @@ export const ExpCardDatas = {
       title: "Informal Education",
       date: "",
       exp: [
-         <li className="informal-edu" key="freeCodeCamp">
+         <div className="informal-edu" key="freeCodeCamp">
             Free Code Camp :
             <ul>
                <li className="not-line">
@@ -102,13 +102,6 @@ export const ExpCardDatas = {
                      Responsive Web Design
                   </div>
 
-                  {/* <button className="certificate">
-                     <BsAwardFill />
-                     <div className="certificate-view">
-                        <img src={imageRWD} alt="Image Responsive Web Design Certificate" className="certificate-view" />
-                     </div>
-                  </button> */}
-
                   <ModalCertificate />
 
                   <a href="https://rasspp.github.io/freecodecamp-responsivewebdesign.github.io/" className="demo" target="_blank" rel="noreferrer">
@@ -116,8 +109,8 @@ export const ExpCardDatas = {
                   </a>
                </li>
             </ul>
-         </li>,
-         <li key="hackerrank">Hackker Rank</li>,
+         </div>,
+         <div key="hackerrank">Hackker Rank</div>,
       ],
       goto: "https://damatiza.com",
    },
