@@ -1,7 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { AiFillGithub, AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-const [ig, twt, lnk, gh] = ["https://www.instagram.com/rass", "https://twitter.com/rass", "https://www.linkedin.com/in/rasspp", "https://github.com/rasspp"];
+const [ig, twt, lnk, gh] = [
+   "https://www.instagram.com/ridhotherass",
+   "https://twitter.com/rass",
+   "https://www.linkedin.com/in/ridhoakbartherass/",
+   "https://github.com/rasspp",
+];
 
 function Footer() {
    let date = new Date();
@@ -21,7 +26,7 @@ function Footer() {
                <ul>
                   <li>
                      <a href={ig} target="_blank" rel="noopener noreferrer">
-                        <AiFillGithub />
+                        <AiFillInstagram />
                      </a>
                   </li>
                   <li>
@@ -36,7 +41,7 @@ function Footer() {
                   </li>
                   <li>
                      <a href={gh} target="_blank" rel="noopener noreferrer">
-                        <AiFillInstagram />
+                        <AiFillGithub />
                      </a>
                   </li>
                </ul>
