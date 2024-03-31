@@ -5,7 +5,6 @@ import Portfolios from "./components/Portfolios/Portfolios";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience/Experience";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-// import ScrollToTop from "./components/ScrollToTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       <Router>
          <div className="App">
             <Navbar />
-            {/* <ScrollToTop /> */}
             <Routes>
                <Route path="/" element={<Home />} />
                <Route path="/portfolios" element={<Portfolios />} />

@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import pdf from "./../../assets/CV_Ridho_Akbar.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
+import { AiOutlineSolution, AiOutlineSearch } from "react-icons/ai";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { ExpSection } from "./ExpSection";
 
@@ -17,7 +17,14 @@ function Experience() {
                   <Button href={pdf} target="_blank" className="download-cv">
                      <span>CV</span>
                      <span>
-                        <AiOutlineDownload />
+                        <AiOutlineSolution />
+                     </span>
+                  </Button>
+                  <p className="or">or</p>
+                  <Button href="./cv-web" target="_blank" className="download-cv cv-web">
+                     <span>CV Web</span>
+                     <span>
+                        <AiOutlineSearch />
                      </span>
                   </Button>
                </Col>

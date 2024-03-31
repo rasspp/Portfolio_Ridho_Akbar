@@ -970,6 +970,19 @@ strong {
    border-radius: 50%;
    transition: 0.1s 0.3s;
 }
+.experience-section .or {
+   padding: 0;
+   margin: 0;
+   margin-top: 10px;
+}
+.experience-section .download-cv.cv-web {
+   width: 100px;
+   border-radius: 4px;
+}
+.experience-section .download-cv:focus {
+   outline: none !important;
+   box-shadow: none;
+}
 .experience-section .download-cv:hover {
    background-color: var(--background-color);
    border: 5px solid var(--main-color);
