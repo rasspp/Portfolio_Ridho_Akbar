@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { Button } from "react-bootstrap";
 
 function PortfolioCards({ title, imgPath1, imgPath2, imgPath3, description, ghUrl, demo, demoUrl }) {
    const [showModal, setShowModal] = useState(false);
@@ -99,8 +100,20 @@ function PortfolioCards({ title, imgPath1, imgPath2, imgPath3, description, ghUr
             </div>
 
             {/* Modal */}
-            <Modal show={showModal} onHide={handleModalClose} centered>
-               <Modal.Body>{selectedImg && <img src={selectedImg} alt="modal-img" className="modal-image" />}</Modal.Body>
+            {/* <Modal className="certificate-modal" show={showModal} onHide={handleModalClose} centered>
+               <Modal.Body>{selectedImg && <img src={selectedImg} alt="modal-img" className="modal-image " />}</Modal.Body>
+            </Modal> */}
+
+            <Modal show={showModal} onHide={handleModalClose} className="certificate-modal">
+               <Modal.Header closeButton>
+                  <Modal.Title>Booking App</Modal.Title>
+               </Modal.Header>
+               <Modal.Body>{selectedImg && <img src={selectedImg} alt="modal-img" className="modal-image " />}</Modal.Body>
+               <Modal.Footer>
+                  <Button variant="secondary" onClick={handleModalClose}>
+                     Close
+                  </Button>
+               </Modal.Footer>
             </Modal>
          </Card.Body>
       </Card>

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Staatliches&display=swap");
+@import url("./scrollbar.css");
+@import url("./navbar.css");
+@import url("./home.css");
+@import url("./aboutMe.css");
+@import url("./portfolio.css");
+@import url("./experience.css");
+@import url("./footer.css");
+
+html {
+   /* --imp-text-color: #c770f0; */
+   --text-light: #f2cedd;
+   --secondary-font: "Staatliches", cursive;
+
+   --main-color: #96b23c;
+   --secondary-color: #628d3d;
+   --tertiary-color: #dfeaa6;
+   --background-color: #0f3b10;
+
+   --border: 2px solid var(--main-color);
+   --border-radius: 20px 60px;
+}
+::selection {
+   background-color: var(--background-color);
+   color: var(--main-color);
+}
+
+/* * reset */
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-family: "Poppins", sans-serif !important;
+   font-weight: 500;
+   background-color: var(--background-color) !important;
+   overscroll-behavior: none;
+}
+.App {
+   text-align: center;
+}
+
+/* class utility */
+.main-color {
+   color: var(--main-color) !important;
+}
+
+.second-color {
+   color: var(--secondary-color);
+}
+
+.bg-color {
+   background-color: var(--background-color);
+}
+
+button:focus {
+   box-shadow: none !important;
+}
+
+/* *** ================= Hover Effect ================= *** */
+strong {
+   color: var(--main-color);
+   padding: 0;
+   transition: all 0.3s;
+   border-radius: var(--border-radius);
+}
+.strong-animation {
+   font-family: var(--secondary-font);
+   letter-spacing: 1.5px;
+}
+.hover-area:hover .strong-animation {
+   color: #181227 !important;
+   background-color: var(--main-color);
+   letter-spacing: 1.5px;
+   padding: 0 20px;
+   margin: 0 10px;
+}
+/* * =========== *** modal custom ========== */
+@media (max-width: 576px) {
+   .modal-content {
+      width: 100vw;
+   }
+   .modal-content img {
+      width: 100%;
+   }
+}
+@media (min-width: 576px) {
+   .modal-dialog {
+      margin: 0;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+   .modal-content {
+      width: max-content;
+   }
+   .modal-body {
+      display: flex;
+      justify-content: center;
+   }
+}
+/* * =========== *** end modal custom ========== */

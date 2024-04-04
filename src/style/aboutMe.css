@@ -1,0 +1,200 @@
+
+
+/* *** ================= About *** ================= */
+
+.about-section {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    color: white;
+ }
+ 
+ .about-section .row {
+    margin-bottom: 70px;
+    padding: 50px 0 20px 0;
+ }
+ .about-content {
+    position: relative;
+ }
+ 
+ .heading-content-about h1 {
+    margin-bottom: 20px;
+ }
+ .heading-content-about {
+    position: absolute;
+    top: -15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: var(--background-color);
+    background-color: var(--background-color);
+    background-color: var(--main-color);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    z-index: 1;
+ }
+ .heading-content-about strong {
+    color: #181227;
+ }
+ .content-about {
+    border: none !important;
+    color: white;
+    background-color: transparent !important;
+ }
+ .about-me {
+    line-height: 30px;
+    text-align: left;
+    font-size: 1.3rem;
+    padding: 20px 30px;
+    border: var(--border) !important;
+    border-radius: var(--border-radius);
+ }
+ .about-me p {
+    padding-top: 15px;
+ }
+ .quotes {
+    color: var(--main-color);
+    margin-top: 30px;
+ }
+ @media (max-width: 767px) {
+    .about-img {
+       padding-top: 0;
+    }
+    .about-me {
+       padding: 20px;
+       border-radius: 10px 40px;
+    }
+    .about-me p {
+       font-size: 1rem;
+       letter-spacing: 0.5px;
+       line-height: 20px;
+    }
+ }
+ 
+ .tech-icons {
+    position: relative;
+    min-width: 130px;
+    min-height: 140px;
+    overflow: hidden;
+    font-size: 4.5em;
+    background-color: transparent;
+    font-weight: bold !important;
+    padding: 10px;
+    margin: 15px;
+    border: var(--border);
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 20px 60px;
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+ }
+ .about-section .project-heading {
+    margin-bottom: 10px;
+ }
+ .container-tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+ }
+ @media (max-width: 767px) {
+    .tech-icons.tool {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 3.4rem;
+    }
+    .tech-icons.tool:nth-child(1) p {
+       right: 5%;
+    }
+    .tech-icons.tool svg {
+       transition: 0.3s;
+    }
+    .tech-icons.tool:hover svg {
+       transform: translateY(-10px);
+       font-size: 3.2rem;
+    }
+    .about-section .project-heading {
+       margin-bottom: 30px;
+       font-size: 2rem;
+    }
+    .container-tech-icons {
+       justify-content: center;
+    }
+ }
+ .tech-icons:hover {
+    color: var(--background-color);
+    background-color: var(--main-color);
+    font-size: 4rem;
+ }
+ .tech-icons:hover.tool {
+    font-size: 3.5rem;
+ }
+ .tech-icons::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: 2px;
+    left: 2px;
+    z-index: 0;
+    border-radius: var(--border-radius);
+    border: var(--border);
+ }
+ 
+ .tech-icons p {
+    position: absolute;
+    right: 15%;
+    bottom: -50px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+ }
+ .tech-icons:hover p {
+    opacity: 1;
+    bottom: -7px;
+    color: white;
+ }
+ @media (max-width: 767px) {
+    .tech-icons p {
+       font-size: 1rem;
+    }
+ }
+ 
+ .tech-icon-images {
+    padding: 20px;
+    line-height: 1.6;
+ }
+ 
+ @media (max-width: 767px) {
+    .tech-icons {
+       margin: 10px;
+    }
+ }
+ 
+ .github-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .github-heading h1 {
+    margin: 0;
+    font-size: 2.8rem;
+ }
+ @media (max-width: 767px) {
+    .github-heading h1 {
+       font-size: 2rem;
+       margin-bottom: 70px !important;
+    }
+    .react-activity-calendar__footer {
+       display: flex;
+       flex-direction: column;
+    }
+    .react-activity-calendar__count {
+       order: 2;
+       margin-top: 20px;
+    }
+    .react-activity-calendar__legend-colors {
+       order: 1;
+    }
+ }
+ 

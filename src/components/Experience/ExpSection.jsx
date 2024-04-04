@@ -17,6 +17,7 @@ export const ExpSection = ({ section, h2Start, h2End }) => {
                <div className="experience-cards">
                   <ExpCard dataType="artatixData" />
                   <ExpCard dataType="damatizaData" />
+                  <ExpCard dataType="bookingAppData" />
                </div>
             ) : (
                <div className="experience-cards">

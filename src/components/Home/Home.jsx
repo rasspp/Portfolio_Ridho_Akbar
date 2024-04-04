@@ -12,7 +12,7 @@ function Home() {
                   <Col md={8} className="home-heading ps-4 ps-md-5">
                      <div className="home-typewriter">
                         <h1 className="heading">
-                           Welcome to <strong>My Personal Website</strong>
+                           Welcome to <strong>My Portfolio</strong>
                         </h1>
                      </div>
 
@@ -24,7 +24,7 @@ function Home() {
                      </h1>
 
                      <p className="profession">
-                        I am is a <strong> Frontend Developer</strong>
+                        I am is a <strong> Full-Stack Web Developer</strong>
                      </p>
                   </Col>
 

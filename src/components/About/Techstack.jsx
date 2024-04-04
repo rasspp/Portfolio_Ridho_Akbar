@@ -1,8 +1,25 @@
 import { Row, Col } from "react-bootstrap";
 import { DiHtml5, DiCss3, DiSass, DiJavascript1, DiReact, DiNodejs, DiMongodb, DiBootstrap, DiGit } from "react-icons/di";
-import { SiTailwindcss, SiExpress } from "react-icons/si";
+import { FaPhp } from "react-icons/fa";
+import { SiTailwindcss, SiExpress, SiMysql } from "react-icons/si";
 
 function Techstack() {
+   const techIcons = [
+      { icon: <DiHtml5 />, name: "HTML" },
+      { icon: <DiCss3 />, name: "CSS" },
+      { icon: <DiSass />, name: "SCSS" },
+      { icon: <DiBootstrap />, name: "Bootstrap" },
+      { icon: <SiTailwindcss />, name: "Tailwind" },
+      { icon: <DiJavascript1 />, name: "Javascript" },
+      { icon: <DiMongodb />, name: "Mongo DB" },
+      { icon: <SiExpress />, name: "Express JS" },
+      { icon: <DiReact />, name: "React JS" },
+      { icon: <DiNodejs />, name: "Node JS" },
+      { icon: <FaPhp />, name: "PHP" },
+      { icon: <SiMysql />, name: "Mysql" },
+      { icon: <DiGit />, name: "Git" },
+   ];
+
    return (
       <Row className="hover-area">
          <Col md={12}>
@@ -13,50 +30,12 @@ function Techstack() {
          </Col>
 
          <div className="container-tech-icons">
-            <Col xs={4} md={2} className="tech-icons">
-               <DiHtml5 />
-               <p>HTML</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiCss3 />
-               <p>CSS</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiSass />
-               <p>SCSS</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiBootstrap />
-               <p>Bootstrap</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <SiTailwindcss />
-               <p>Tailwind</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiJavascript1 />
-               <p>Javascript</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiMongodb />
-               <p>Mongo DB</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <SiExpress />
-               <p>Express JS</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiReact />
-               <p>React JS</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiNodejs />
-               <p>Node JS</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons">
-               <DiGit />
-               <p>Git</p>
-            </Col>
+            {techIcons.map((tech, index) => (
+               <Col xs={4} md={2} className="tech-icons" key={index}>
+                  {tech.icon}
+                  <p>{tech.name}</p>
+               </Col>
+            ))}
          </div>
       </Row>
    );

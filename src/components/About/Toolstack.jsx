@@ -2,6 +2,15 @@ import { Col, Row } from "react-bootstrap";
 import { SiVisualstudiocode, SiPostman, SiFigma, SiWindows, SiVercel, SiVite } from "react-icons/si";
 
 function Toolstack() {
+   const tools = [
+      { icon: <SiWindows />, name: "Windows 10" },
+      { icon: <SiVisualstudiocode />, name: "VS Code" },
+      { icon: <SiPostman />, name: "Postman" },
+      { icon: <SiFigma />, name: "Figma" },
+      { icon: <SiVercel />, name: "Vercel" },
+      { icon: <SiVite />, name: "Vite JS" },
+   ];
+
    return (
       <Row className="hover-area">
          <Col md={12}>
@@ -12,30 +21,12 @@ function Toolstack() {
          </Col>
 
          <div className="container-tech-icons">
-            <Col xs={4} md={2} className="tech-icons tool">
-               <SiWindows />
-               <p>Windows 10</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons tool">
-               <SiVisualstudiocode />
-               <p>VS Code</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons tool">
-               <SiPostman />
-               <p>Postman</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons tool">
-               <SiFigma />
-               <p>Figma</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons tool">
-               <SiVercel />
-               <p>Vercel</p>
-            </Col>
-            <Col xs={4} md={2} className="tech-icons tool">
-               <SiVite />
-               <p>Vite JS</p>
-            </Col>
+            {tools.map((tool, index) => (
+               <Col xs={4} md={2} className="tech-icons tool" key={index}>
+                  {tool.icon}
+                  <p>{tool.name}</p>
+               </Col>
+            ))}
          </div>
       </Row>
    );

@@ -21,7 +21,7 @@ function Experience() {
                      </span>
                   </Button>
                   <p className="or">or</p>
-                  <Button href="./cv-web" target="_blank" className="download-cv cv-web">
+                  <Button href="https://rasspp.github.io/CV_Web/" target="_blank" className="download-cv cv-web">
                      <span>CV Web</span>
                      <span>
                         <AiOutlineSearch />
