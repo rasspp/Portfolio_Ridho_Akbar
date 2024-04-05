@@ -44,8 +44,8 @@ export const ExpCardDatas = {
       techIcons: ["ReactJs", "ExpressJs", "NodeJs", "MongoDb", "TailwindCss", "ViteJs"],
       achievements: [
          {
-            first: "",
-            second: "",
+            first: "This website is a web application for scheduling food orders built using React Js, Express Js, Node Js, and Mongo Db (MERN Stack).",
+            second: "I worked on this website individually from design, development, to deployment from mid-December 2023 to late January 2024.",
             third: "",
             fourth: "",
          },

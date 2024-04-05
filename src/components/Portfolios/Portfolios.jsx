@@ -5,7 +5,7 @@ import dashboard_zuppasoup from "./../../assets/portfolio/dashboard_zuupasoup.pn
 import add_event_zuppasoup from "./../../assets/portfolio/addEvent_zuppasoup.png";
 import login_page_zuppasoup from "./../../assets/portfolio/loginPage_zuppasoup.png";
 import { BookingApp } from "./PortfolioDatas/BookingApp";
-import { Rasshop } from "./PortfolioDatas/Rasshop";
+// import { Rasshop } from "./PortfolioDatas/Rasshop";
 
 function Portfolios() {
    return (
@@ -35,10 +35,10 @@ function Portfolios() {
                   </Col>
                </Col>
 
-               <Col md={12} className="portfolios">
+               {/* <Col md={12} className="portfolios">
                   <Col xl={4} className="project-card">
                      <PortfolioCard
-                        imgPath1={dashboard_zuppasoup}
+                        imgPath1={dashboard_zuppasoup} 
                         imgPath2={add_event_zuppasoup}
                         imgPath3={login_page_zuppasoup}
                         demo={false}
@@ -48,7 +48,7 @@ function Portfolios() {
                         demoUrl="privacy"
                      />
                   </Col>
-               </Col>
+               </Col> */}
             </Row>
          </Container>
       </Container>
