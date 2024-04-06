@@ -3,6 +3,9 @@ import { BsArrow90DegLeft, BsAwardFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { ModalCertificate } from "./ModalCertificate";
 
+import juniorWebDevelopment_Image from "./../../assets/experience/Junior_Web_Development.jpg";
+import responsiveWebDesign_Image from "./../../assets/experience/responsive_web_design.png";
+
 export const ExpCardDatas = {
    artatixData: {
       title: "Artatix",
@@ -92,7 +95,7 @@ export const ExpCardDatas = {
                      Digitalent Website Development
                   </div>
 
-                  <ModalCertificate />
+                  <ModalCertificate image={juniorWebDevelopment_Image} />
                </li>
             </ul>
          </div>,
@@ -106,7 +109,7 @@ export const ExpCardDatas = {
                      Responsive Web Design
                   </div>
 
-                  <ModalCertificate />
+                  <ModalCertificate image={responsiveWebDesign_Image} />
 
                   <a href="https://rasspp.github.io/freecodecamp-responsivewebdesign.github.io/" className="demo" target="_blank" rel="noreferrer">
                      <CgWebsite />

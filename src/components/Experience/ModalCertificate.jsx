@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Button, Modal } from "react-bootstrap";
 import { BsAwardFill } from "react-icons/bs";
-import imageRWD from "./../../assets/experience/ResponsiveWD.png";
 import { useState } from "react";
 
-export function ModalCertificate() {
+export function ModalCertificate({ image }) {
    const [show, setShow] = useState(false);
 
    const handleClose = () => setShow(false);
@@ -19,7 +19,7 @@ export function ModalCertificate() {
                <Modal.Title>Responsive Web Design</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-               <img src={imageRWD} alt="Image Responsive Web Design Certificate" width={"100%"} />
+               <img src={image} alt="Image Responsive Web Design Certificate" width={"100%"} />
             </Modal.Body>
             <Modal.Footer>
                <Button variant="secondary" onClick={handleClose}>
