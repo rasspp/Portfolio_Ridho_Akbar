@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "title": "Project One",
+    "description": "Description of",
+    "category": "web",
+    "year": "2023",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 1" },
+      { "src": "https://via.placeholder.com/150", "title": "Image 2" }
+    ],
+    "link": "https://example.com/project-one",
+    "stack": ["react", "tailwind", "typescript"]
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "description": "Description of project two. Focused on mobile app development.",
+    "category": "software",
+    "year": "2023",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 3" }
+    ],
+    "link": "",
+    "stack": ["react", "tailwind"]
+  },
+  {
+    "id": 3,
+    "title": "Project Three",
+    "description": "Description of project three. Involved in backend development.",
+    "category": "web",
+    "year": "2022",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 4" }
+    ],
+    "link": "https://example.com/project-three",
+    "stack": ["node", "express", "mongodb"]
+  },
+  {
+    "id": 4,
+    "title": "Project Four",
+    "description": "Description of project four. Involved in backend development.",
+    "category": "no code",
+    "year": "2022",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 5" }
+    ],
+    "link": "",
+    "stack": ["html", "css"]
+  },
+  {
+    "id": 5,
+    "title": "Project Four",
+    "description": "Description of project four. Involved in backend development.",
+    "category": "no code",
+    "year": "2022",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 5" }
+    ],
+    "link": "",
+    "stack": ["html", "css"]
+  }
+]

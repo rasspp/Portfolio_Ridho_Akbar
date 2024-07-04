@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .neumorphism {
+        box-shadow: inset 5px 5px 2px #222, inset -4px -4px 2px #dbdbdb;
+    }
+    .neumorphism-mini {
+        box-shadow: inset 2px 2px 2px #444, inset -2px -2px 2px #dbdbdb;
+    }
+    .neumorphism-bg-dark {
+        box-shadow: inset 5px 5px 2px #ddd, inset -4px -4px 2px #aaa;
+    }
+
+    .neumorphism-x {
+        box-shadow: inset 2px 2px 2px #222, inset -2px -2px 2px #ffffff, 1px 1px 2px #222, -2px -2px 2px #ffffff;
+    }
+
+    .neumorphism-x:hover {
+        box-shadow:1px 1px 2px #222, -2px -2px 2px #ffffff;
+
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+#tsparticles {
+    position: none;
+    width: 60px !important;
+    height: 60px !important;
+    z-index: 0;
+}

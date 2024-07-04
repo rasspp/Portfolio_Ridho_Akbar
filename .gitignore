@@ -7,18 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-#dependencies
-index.txt
 node_modules
-/.pnp
-.pnp.js
 dist
 dist-ssr
 *.local
-/build
-
-# testing
-/coverage
 
 # Editor directories and files
 .vscode/*
@@ -30,16 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-.eslintcache
-
-Server/node_modules
-Server/config.js

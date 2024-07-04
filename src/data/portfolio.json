@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "title": "Booking Zuppasoup",
+    "category": "client",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 1" },
+      { "src": "https://via.placeholder.com/150", "title": "Image 2" }
+    ],
+    "description": "A comprehensive ",
+    "link": "https://zuppasoup.com",
+    "stack": ["Mongodb", "Express", "React", "Node","Tailwind", "JavaScript"]
+  },
+  {
+    "id": 2,
+    "title": "Artatix",
+    "category": "case",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 1" }
+    ],
+    "description": "A case study project focused on developing a platform for artists to showcase and sell their artwork online.",
+    "link": "https://artatix.com",
+    "stack": ["React", "CSS", "Firebase"]
+  },
+  {
+    "id": 3,
+    "title": "Damatiza",
+    "category": "client",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 1" },
+      { "src": "https://via.placeholder.com/150", "title": "Image 2" },
+      { "src": "https://via.placeholder.com/150", "title": "Image 3" }
+    ],
+    "description": "An e-commerce website for Damatiza, providing a user-friendly interface for browsing and purchasing products.",
+    "link": "https://damatiza.com",
+    "stack": ["Vue", "Bootstrap", "Node"]
+  },
+  {
+    "id": 4,
+    "title": "Portfolio",
+    "category": "case",
+    "images": [
+      { "src": "https://via.placeholder.com/150", "title": "Image 1" }
+    ],
+    "description": "A portfolio website designed to showcase the skills, projects, and experience of a web developer.",
+    "link": "https://portfolio.com",
+    "stack": ["HTML", "CSS", "JavaScript"]
+  }
+]
