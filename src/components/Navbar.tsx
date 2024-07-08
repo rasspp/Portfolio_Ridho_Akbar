@@ -18,28 +18,28 @@ const Navbar: React.FC = () => {
             <div className={`flex flex-col md:flex-row items-center gap-2 mt-4 md:mt-0 transition-transform duration-500 *:border-2 *:p-3  *:rounded-md hover:*:border-white *:border-transparent  ${isOpen ? 'translate-y-0 *:border-white' : 'absolute md:static -top-72 md:top-0 md:translate-y-0 '} drop-shadow-[2px_2px_2px_black]`}>
                 <NavLink
                     to="/profil"
-                    className={({ isActive }) => ` m-btn  ${isActive ? 'z-50 text-blue-300' : 'text-gray-500 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
+                    className={({ isActive }) => ` m-btn  ${isActive ? 'z-50 text-blue-300' : 'text-gray-800 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
                     title="Profil"
                 >
                     <BsPersonCircle className="w-8 h-8"/>
                 </NavLink>
                 <NavLink
                     to="/about"
-                    className={({ isActive }) => ` m-btn ${isActive ? ' text-blue-300 z-50' : 'text-gray-500 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
+                    className={({ isActive }) => ` m-btn ${isActive ? ' text-blue-300 z-50' : 'text-gray-800 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
                     title="About"
                 >
                     <BsFillPersonLinesFill className="w-8 h-8"/>
                 </NavLink>
                 <NavLink
                     to="/portfolio"
-                    className={({ isActive }) => ` m-btn ${isActive ? ' z-50 text-blue-300' : 'text-gray-500 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
+                    className={({ isActive }) => ` m-btn ${isActive ? ' z-50 text-blue-300' : 'text-gray-800 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
                     title="Portfolio"
                 >
                     <FaProjectDiagram  className="w-8 h-8"/>
                 </NavLink>
                 <NavLink
                     to="/freelance"
-                    className={({ isActive }) => ` m-btn ${isActive ? ' z-50 text-blue-300' : 'text-gray-500 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
+                    className={({ isActive }) => ` m-btn ${isActive ? ' z-50 text-blue-300' : 'text-gray-800 bg-blue-300 z-0 backdrop-blur'} transition-all duration-300`}
                     title="Freelance"
                 >
                     <TbFolderDollar className="w-8 h-8"/>

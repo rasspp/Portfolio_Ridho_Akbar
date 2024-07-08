@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaProjectDiagram, FaRegCalendarAlt } from 'react-icons/fa';
+import { FaRegFilePdf } from 'react-icons/fa6';
 import { GrGroup } from 'react-icons/gr';
-import { BsDownload } from 'react-icons/bs';
-import { LiaFileContractSolid } from 'react-icons/lia';
+import { AiOutlineEye } from 'react-icons/ai';
 import { TbCloudFog } from 'react-icons/tb';
-import axios from 'axios';
+import ReactGA from 'react-ga';
 
 import portfolioData from './../../data/portfolio.json';
 import freelanceData from './../../data/freelance.json';
 
-import pdf from './Ridho_Akbar_CV.pdf';
+import pdf from '/Ridho_Akbar_CV.pdf';
 
 const Statistic: React.FC = () => {
   const startYear = 2022;
   const startMonth = 3; // Maret
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth() + 1; 
-  const experienceYears = currentYear - startYear + (currentMonth >= startMonth ? 0 : -1);
+  const currentMonth = currentDate.getMonth() + 1;
+  const experienceYears =
+    currentYear - startYear + (currentMonth >= startMonth ? 0 : -1);
 
-  const [showDownloadConfirmation, setShowDownloadConfirmation] = useState(false);
-  const [viewCount, setViewCount] = useState(0);
+  const [showDownloadConfirmation, setShowDownloadConfirmation] =
+    useState(false);
+  const [visitCount, setVisitCount] = useState<number>(0); // Tipe data visitCount diperbarui menjadi number
 
   const handleDownloadCV = () => {
     setShowDownloadConfirmation(true);
@@ -33,34 +35,33 @@ const Statistic: React.FC = () => {
 
   const handleConfirmDownload = () => {
     setShowDownloadConfirmation(false);
-    window.location.href = "pdf";
+    window.open(pdf, '_blank', 'noopener,noreferrer');
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      const sheetID = 'YOUR_SHEET_ID'; // ganti dengan ID Google Sheet Anda
-      const apiKey = 'YOUR_API_KEY'; // ganti dengan API Key Anda
-      const range = 'Sheet1!A1'; // ganti dengan range yang sesuai di Google Sheet Anda
-      
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
-      
-      try {
-        const response = await axios.get(url);
-        const newViewCount = parseInt(response.data.values[0][0]);
-        setViewCount(newViewCount);
+    // Inisialisasi Google Analytics
+    ReactGA.initialize('G-WRM85F9TBL'); // Ganti dengan ID pelacakan Anda
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
-        // Update view count di Google Sheets
-        const updateUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?valueInputOption=USER_ENTERED&key=${apiKey}`;
-        await axios.put(updateUrl, {
-          range: range,
-          majorDimension: "ROWS",
-          values: [[newViewCount + 1]]
-        });
+    // Ambil data jumlah pengunjung dari Google Analytics
+    const fetchData = async () => {
+      try {
+      const response: {totalsForAllResults: {[key: string]: string}} | undefined = await ReactGA.ga('get', 'G-WRM85F9TBL', 'pageviews', {
+          'page': window.location.pathname, 
+          'start-date': '7daysAgo',
+          'end-date': 'today',
+        }) as {totalsForAllResults: {[key: string]: string}} | undefined;
+  
+        if (response?.totalsForAllResults?.['ga:pageviews']) {
+          setVisitCount(parseInt(response.totalsForAllResults['ga:pageviews'], 10));
+        } else {
+          console.error('Invalid response from Google Analytics:', response);
+        }
       } catch (error) {
-        console.error('Error fetching data from Google Sheets:', error);
+        console.error('Error fetching data from Google Analytics:', error);
       }
     };
-
+  
     fetchData();
   }, []);
 
@@ -85,14 +86,14 @@ const Statistic: React.FC = () => {
         </div>
       </Link>
 
-       <div className="flex flex-col justify-center items-center h-32 text-gray-800 rounded-lg border bg-white/90 hover:neumorphism hover:pt-1 hover:pl-1">
-        <LiaFileContractSolid className="mx-auto mb-2 text-3xl" />
-        <p className="text-xl font-bold">{viewCount}</p>
-        <p className="text-xl font-semibold">Views</p>
+      <div className="flex flex-col justify-center items-center h-32 text-gray-800 rounded-lg border bg-white/90 hover:neumorphism hover:pt-1 hover:pl-1">
+        <AiOutlineEye className="mx-auto mb-2 text-3xl" />
+        <p className="text-xl font-bold">{visitCount}</p>
+        <p className="text-xl font-semibold">Visits</p>
       </div>
 
       <div className="flex flex-col justify-center items-center h-32 text-center text-gray-800 rounded-lg border bg-white/90 hover:neumorphism hover:pt-1 hover:pl-1">
-        <FaRegCalendarAlt  className="mx-auto mb-2 text-3xl" />
+        <FaRegCalendarAlt className="mx-auto mb-2 text-3xl" />
         <p className="text-xl font-semibold">
           <span className="font-bold">{experienceYears}</span> Years
         </p>
@@ -103,26 +104,26 @@ const Statistic: React.FC = () => {
         className="flex flex-col justify-center items-center h-32 text-center text-gray-800 rounded-lg border cursor-pointer bg-white/90 hover:neumorphism hover:pt-1 hover:pl-1"
         onClick={handleDownloadCV}
       >
-        <BsDownload className="mx-auto mb-2 text-3xl" />
+        <FaRegFilePdf className="mx-auto mb-2 text-3xl" />
         <p className="flex flex-col text-xl font-semibold">
-          Download <span>CV</span>
+          Open <span>PDF CV</span>
         </p>
       </div>
 
       {showDownloadConfirmation && (
         <div className="flex fixed inset-0 z-50 justify-center items-center bg-black bg-opacity-50">
-          <div className="p-4 bg-white rounded-lg shadow-lg">
-            <p className="mb-2 text-lg font-semibold">Download CV?</p>
+          <div className="p-4 text-gray-800 bg-white rounded-lg shadow-lg">
+            <p className="mb-2 text-lg font-semibold">Open PDF CV?</p>
             <div className="flex justify-end">
               <button
                 onClick={handleCancelDownload}
-                className="px-4 py-2 mr-2 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400"
+                className="px-4 py-2 mr-2 font-bold text-blue-400 bg-gray-800 rounded hover:bg-gray-900"
               >
                 Cancel
               </button>
               <button
                 onClick={handleConfirmDownload}
-                className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+                className="px-4 py-2 font-bold bg-blue-400 rounded te xt-gray-800 hover:bg-blue-500"
               >
                 Download
               </button>
@@ -131,12 +132,14 @@ const Statistic: React.FC = () => {
         </div>
       )}
 
-      <a href="https://example.com/cv" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://example.com/cv"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className="flex flex-col justify-center items-center h-32 text-center text-gray-800 rounded-lg border bg-white/90 hover:neumorphism hover:pt-1 hover:pl-1">
           <TbCloudFog className="mx-auto mb-2 text-3xl" />
-          <p className="flex flex-col text-xl font-semibold">
-            Check <span>Online CV</span>
-          </p>
+          <p className="flex flex-col text-xl font-semibold">!!!!!</p>
         </div>
       </a>
     </div>
