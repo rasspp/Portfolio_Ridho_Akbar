@@ -7,6 +7,8 @@ import { IoIosEyeOff } from "react-icons/io";
 import StackIcons from './../components/StackIcons';
 import { BsStack } from "react-icons/bs";
 
+import { Analytics } from "@vercel/analytics/react"
+
 interface Image {
   src: string;
   title: string;
@@ -52,6 +54,8 @@ const Portfolio: React.FC = () => {
 
   return (
     <section id="portfolio" className="flex flex-col p-4 space-y-4 w-full h-full rounded-md backdrop-blur-sm md:p-8 sm bg-blue-300/10">
+      <Analytics/>
+      
       <div className="grid overflow-y-auto grid-cols-2 gap-2">
         <header className="grid grid-cols-1 col-span-2 gap-2 items-center py-2 pt-3 mb-3 md:grid-cols-2">
           <div className="flex justify-center items-center p-1 bg-gray-800 rounded-md border h-fit text-white/90">

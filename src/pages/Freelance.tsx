@@ -7,6 +7,8 @@ import { AiOutlineEye } from "react-icons/ai";
 import { IoIosEyeOff } from "react-icons/io";
 import { BsStack } from "react-icons/bs";
 
+import { Analytics } from "@vercel/analytics/react"
+
 interface Image {
   src: string;
   title: string;
@@ -54,6 +56,8 @@ const Freelance: React.FC = () => {
 
   return (
     <section id="freelance" className="flex flex-col p-4 w-full h-full rounded-md backdrop-blur-sm bg-blue-300/10 md:p-8 md:pt-10">
+      <Analytics/>
+      
       <div className="grid overflow-hidden grid-cols-1 rounded-md h-fit">
         {/* Container Dropdowns */}
         <div className="grid grid-cols-2 gap-5 w-full md:grid-cols-2">

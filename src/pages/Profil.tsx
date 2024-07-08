@@ -5,6 +5,7 @@ import HeroProfile from "./../components/profil/HeroProfile"
 import Statistic from "./../components/profil/Statistic";
 import ProfilCard from "../components/profil/ProfilCard";
 
+import { Analytics } from "@vercel/analytics/react"
 
 
 const Profil: React.FC = () => {
@@ -13,6 +14,8 @@ const Profil: React.FC = () => {
       id="profil"
       className="flex flex-col justify-center p-4 w-full h-full rounded-md backdrop-blur-sm md:p-8 sm bg-blue-300/10"
     >
+      <Analytics/>
+      
       <div className="grid overflow-y-auto grid-cols-1 gap-6 rounded-xl lg:grid-cols-2">
         <div className="grid grid-cols-1 h-full">
          <HeroProfile/>
@@ -30,6 +33,7 @@ const Profil: React.FC = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };

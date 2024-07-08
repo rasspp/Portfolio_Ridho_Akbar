@@ -8,6 +8,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import ParticlesBg from './components/thirdParty/ParticlesBg';
 
+
 function initializeReactGA() {
   ReactGA.initialize('G-WRM85F9TBL');
   ReactGA.pageview(window.location.pathname + window.location.search);

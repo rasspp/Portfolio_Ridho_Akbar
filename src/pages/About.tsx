@@ -8,6 +8,8 @@ import { SiTailwindcss } from 'react-icons/si';
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { BsEmojiKiss } from "react-icons/bs";
 
+import { Analytics } from "@vercel/analytics/react"
+
 interface Description {
   key: string;
   value: string;
@@ -69,6 +71,8 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="flex flex-col justify-center items-center p-4 w-full h-full text-gray-800 rounded-md shadow-lg backdrop-blur-sm md:p-8 sm bg-blue-300/10">
+      <Analytics/>
+      
       <div className="grid overflow-y-auto grid-cols-1 gap-8 max-w-4xl h-full sm:grid-cols-2">
         {/* Card */}
         <div className="flex flex-col rounded-md md:overflow-y-auto card">
@@ -149,6 +153,8 @@ const About: React.FC = () => {
         </div>
 
       </div>
+
+      
     </section>
   );
 };
