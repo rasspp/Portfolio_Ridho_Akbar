@@ -11,8 +11,8 @@ const ProfilCard: React.FC = () => {
   const whatsappNumber = "087860206587"; 
   const whatsappMessage = "Permisi Mas Ridho";
   const phoneNumber = "087860206587"; 
-  const [isCopied, setIsCopied] = useState(false);
-  const [showMailHint, setShowMailHint] = useState(false);
+  const [isCopied, setIsCopied] = useState<boolean>(false);
+  const [showMailHint, setShowMailHint] = useState<boolean>(false);
 
   const handlePhoneClick = () => {
     navigator.clipboard.writeText(phoneNumber).then(() => {
@@ -69,7 +69,7 @@ const ProfilCard: React.FC = () => {
         <a
           href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
           className="text-blue-400"
-          title="Email"
+          title={showMailHint ? `Klik untuk mengirim email`: `Mail`}
           target="_blank"
           onClick={handleMailClick}
         >
